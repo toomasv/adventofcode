@@ -36,4 +36,3 @@ img: draw largest + 1 compose [anti-alias off pen off fill-pen black (boxes)]
 cnt: 0
 forall img [if img/1 = black [cnt: cnt + 1]]
 probe cnt
-;}
