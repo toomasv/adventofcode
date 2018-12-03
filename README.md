@@ -1,2 +1,2 @@
 # adventofcode
-Solutions and discussions of solutions
+Solutions and discussions of solutions in Red
