@@ -7,7 +7,8 @@ until [
 	input: head input 
 	forall input [
 		either found: find nums sum: sum + input/1 [
-			res: found/1 break
+			res: found/1 
+			break
 		][
 			append nums sum
 		]
