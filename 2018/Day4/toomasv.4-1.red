@@ -59,5 +59,4 @@ res: sort/skip/all/compare collect [foreach [id mins] body-of guards [
 	keep either m/2 [m/2][0]
 ]] 4 func [a b][a/2 > b/2]
 
-print [res/1 res/2 res/3 res/4 res/1 * res/3]
-
+print [copy/part res 4 res/1 * res/3]
