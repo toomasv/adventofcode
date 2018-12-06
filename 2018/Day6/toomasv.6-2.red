@@ -28,8 +28,7 @@ repeat y end/y + 1 [
 		loc: as-pair (x - 1) (y - 1)
 		collect/into [
 			forall input [
-				d: distance loc input/1
-				keep d
+				keep distance loc input/1
 			]
 		] clear locs
 		if 10000 > sum locs [cnt: cnt + 1]
