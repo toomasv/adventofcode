@@ -17,7 +17,7 @@ input: load {1, 1
 end: 0x0 
 forall input [end: max end input/1]
 
-; Collect coords with infinite areas (don't need to look at these)
+; Get distances
 pair-sum: func [pair][pair/1 + pair/2]
 distance: func [loc1 loc2][pair-sum absolute loc1 - loc2]
 
