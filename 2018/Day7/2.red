@@ -41,26 +41,23 @@ conds: collect [
 initial: sort exclude pre post
 state: copy []
 
-; Woking elves
+; Working elves
 elf: object [
 	id: none
 	found: none
 	does-some-work: has [step cond][
 		working-time/:id: max 0 working-time/:id - 1
 		if 0 = working-time/:id [
-			prin ["id:" id " "]
-			if found [append state probe found found: none] 
+			if found [append state found found: none] 
 			either step: take initial [
-				prin [tab "ini:" mold step mold state]
 				found: step
-				prin " working: " probe working-time/:id: subtract to-integer step 4;64;
+				working-time/:id: subtract to-integer step 4;64;
 			][
 				foreach [step cond] head conds [
 					if empty? exclude cond state [
-						prin [tab mold step mold cond mold state]
 						remove/part find/skip conds step 2 2
 						found: step
-						prin " working: " probe working-time/:id: subtract to-integer step 4;64;
+						working-time/:id: subtract to-integer step 4;64;
 						break
 					]
 				]
@@ -75,12 +72,11 @@ working-time: copy [0 0 0 0 0]
 ; Do until all steps are finished
 time: -1
 until [
-	prin time: time + 1 prin " "
+	time: time + 1 prin " "
 	foreach worker workers [worker/does-some-work]
-	print ""
 	all [tail? conds 0 = sum working-time]
 ]
-print [mold conds mold state]
+;print [mold conds mold state]
 probe trim/all form state
 time - 1
 ;1:FHICMRTXYDBOAJNPWQGVZUEKLS
