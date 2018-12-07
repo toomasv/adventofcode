@@ -72,7 +72,7 @@ working-time: copy [0 0 0 0 0]
 ; Do until all steps are finished
 time: -1
 until [
-	time: time + 1 prin " "
+	time: time + 1
 	foreach worker workers [worker/does-some-work]
 	all [tail? conds 0 = sum working-time]
 ]
