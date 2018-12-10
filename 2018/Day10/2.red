@@ -1,4 +1,4 @@
-Red [Day: 10 Task: "Digital detection"]
+Red [Day: 10 Part: 2 Task: "Digital detection"]
 data: parse read %input [collect some [
 	["position=<" | " velocity=<"] opt space 
 	copy x to "," skip some space copy y to #">" 
