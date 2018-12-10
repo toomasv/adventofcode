@@ -1,4 +1,4 @@
-Red [Day: 10 Part: "1 and 2 Visual detection"]
+Red [Day: 10 Part: "1 and 2 Visual detection" Comment: {Slow down around 10700. Stop and manually move after 10900}]
 data: parse read %input [collect some [
 	["position=<" | " velocity=<"] opt space 
 	copy x to "," skip some space copy y to #">" 
