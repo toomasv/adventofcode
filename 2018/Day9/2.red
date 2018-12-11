@@ -2,7 +2,7 @@ Red [Day: 9 Part: 2 Problem: "Hangs for part 2 (7179000) but works for part 1 (7
 players: 459
 final: 7179000
 scores: make map! repeat i players [append [] reduce [i 0]]
-circle: make vector! final
+circle: make block! final
 append circle 0
 repeat marble final [
 	either 0 = (marble % 23) [
