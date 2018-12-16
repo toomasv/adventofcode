@@ -43,7 +43,6 @@ print ["Part 1:" count0]
 
 ;;;; Part 2
 op-list: foreach [op _] ops [append [] op]
-sort/compare op-list func [a b][(length? get a) < (length? get b)]
 forall op-list [
 	sort/compare either 1 = length? get op-list/1 [next op-list][op-list] 
 		func [a b][(length? get a) < (length? get b)]
