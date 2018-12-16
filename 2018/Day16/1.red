@@ -48,8 +48,8 @@ forall op-list [
 		func [a b][(length? get a) < (length? get b)]
 	foreach op next op-list [remove find get op first get op-list/1]
 ]
-oper: make map! 16
-foreach op op-list [oper/(first get op): select ops op]
+foreach op op-list [set op first get op]
+ops: reduce ops
 before: [0 0 0 0]
-foreach [op A B C] load %tests [do oper/:op]
+foreach [op A B C] load %tests [do select ops op]
 print ["Part 2:" before/1]
