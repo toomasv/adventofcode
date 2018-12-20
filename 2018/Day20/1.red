@@ -62,7 +62,6 @@ view compose/deep [
 				poke plan pos leaf 
 				either empty? moves [
 					face/rate: none
-					btn/text: "Finished"
 					sort/skip/compare ends 2 2
 					poke plan first skip tail ends -2 red
 					poke plan start red
